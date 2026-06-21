@@ -76,6 +76,11 @@ const id: Copy = {
         desc: 'Pilih turun, jaga, atau naik berat badan. Dapat rekomendasi otomatis.',
       },
       {
+        icon: '🔥',
+        title: 'Estimasi kalori olahraga',
+        desc: 'Cukup ketik latihan & durasi (mis. "lari 30 menit"). AI hitung kalori terbakar sesuai berat badanmu — bisa banyak latihan sekaligus.',
+      },
+      {
         icon: '📈',
         title: 'Grafik progres',
         desc: 'Catat berat badan, lihat tren naik/turun dalam grafik langsung di chat.',
@@ -188,6 +193,11 @@ const en: Copy = {
         icon: '🏃',
         title: 'Diet programs',
         desc: 'Pick cut, maintain, or gain. Get automatic macro & calorie recommendations.',
+      },
+      {
+        icon: '🔥',
+        title: 'Exercise calorie estimate',
+        desc: 'Just type an activity & duration (e.g. "run 30 min"). AI estimates calories burned based on your body weight — multiple activities at once.',
       },
       {
         icon: '📈',
