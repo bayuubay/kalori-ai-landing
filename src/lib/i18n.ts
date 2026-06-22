@@ -47,8 +47,8 @@ const id: Copy = {
     title: 'Hitung kalori cukup dari',
     titleAccent: 'foto makananmu',
     subtitle:
-      'Kirim foto atau ketik makananmu ke bot Telegram. AI langsung estimasi kalori, protein, karbohidrat, dan lemak. Tanpa install aplikasi, tanpa ribet cari database.',
-    proof: 'Gratis kredit awal · Tanpa kartu kredit · Langsung di Telegram',
+      'Kirim foto atau ketik makananmu ke bot Telegram. AI langsung estimasi kalori, protein, karbohidrat, dan lemak. Tanpa install aplikasi, tanpa ribet cari data makanan.',
+    proof: 'Gratis coba · Tanpa biaya langganan · Langsung di Telegram',
   },
   features: {
     title: 'Semua yang kamu butuh untuk diet cerdas',
@@ -94,34 +94,34 @@ const id: Copy = {
   },
   how: {
     title: 'Mulai dalam 3 langkah',
-    subtitle: 'Tidak perlu install apa pun. Cukup Telegram.',
+    subtitle: 'Tidak perlu install apa pun. Cukup dengan akun Telegram kamu.',
     steps: [
       {
         num: '1',
         title: 'Buka bot di Telegram',
-        desc: 'Klik tombol di bawah, lalu tekan Start. Isi profil singkat (tinggi, berat, target).',
+        desc: 'Klik tombol di bawah ini, lalu tekan Start. Isi profil singkat (tinggi, berat, target).',
       },
       {
         num: '2',
         title: 'Kirim makananmu',
-        desc: 'Foto atau ketik apa yang kamu makan. AI langsung beri estimasi gizi.',
+        desc: 'Foto atau ketik apa yang kamu makan. AI langsung beri estimasi kalori dan makronutrien.',
       },
       {
         num: '3',
         title: 'Pantau progres',
-        desc: 'Simpan catatan, lihat ringkasan & grafik, capai targetmu lebih cepat.',
+        desc: 'Catat progress berat badan, lihat ringkasan & grafik, capai targetmu lebih cepat.',
       },
     ],
   },
   pricing: {
-    title: 'Harga sederhana, bayar sesuai pakai',
-    subtitle: 'Coba gratis dulu. Top up kapan saja kalau butuh lebih.',
-    starterTitle: 'Kredit gratis di awal',
+    title: 'Harga UMKM, bayar sesuai kebutuhan',
+    subtitle: 'Coba sekarang, gratis! Top up mudah dan murah, kapan saja kamu butuh.',
+    starterTitle: 'Dapatkan kredit gratis di awal',
     starterDesc:
       'Setiap pengguna baru dapat kredit gratis untuk mencoba. Tanpa kartu kredit, tanpa langganan.',
-    payTitle: 'Bayar sesuai pakai',
+    payTitle: 'Bayar sesuai pemakaian',
     payDesc:
-      'Tiap analisis pakai kredit (foto sedikit lebih dari teks). Top up paket kredit lewat pembayaran lokal kapan saja.',
+      'Tiap analisis pakai kredit (foto atau teks). Top up paket kredit dengan metode pembayaran favoritmu.',
     note: 'Ajak teman lewat tautan undangan — kalian berdua dapat kredit gratis.',
   },
   faq: {
@@ -133,11 +133,11 @@ const id: Copy = {
       },
       {
         q: 'Perlu install aplikasi?',
-        a: 'Tidak. Semua jalan di dalam Telegram yang sudah ada di ponselmu. Cukup buka bot dan mulai.',
+        a: 'Tidak. Semua berjalan di dalam Telegram yang sudah ada di ponselmu. Cukup buka bot dan mulai.',
       },
       {
         q: 'Seberapa akurat estimasinya?',
-        a: 'AI memberi estimasi yang baik untuk pantau tren harian. Untuk kondisi medis khusus, tetap konsultasikan dengan dokter atau ahli gizi.',
+        a: 'AI memberi estimasi berdasarkan foto dan datamu, AI mungkin melakukan kesalahan. Untuk kondisi medis khusus, tetap konsultasikan dengan dokter atau ahli gizi.',
       },
       {
         q: 'Bahasa apa yang didukung?',
@@ -228,7 +228,7 @@ const en: Copy = {
       {
         num: '3',
         title: 'Track your progress',
-        desc: 'Save logs, view summaries & charts, hit your goals faster.',
+        desc: 'Save weight progress, view summaries & charts, hit your goals faster.',
       },
     ],
   },
@@ -240,7 +240,7 @@ const en: Copy = {
       'Every new user gets free credits to try it out. No credit card, no subscription.',
     payTitle: 'Pay as you go',
     payDesc:
-      'Each analysis uses credits (photos cost a bit more than text). Top up credit packs via local payment anytime.',
+      'Each analysis uses credits (photos cost a bit more than text). Top up credit packs via your favourite payment method anytime.',
     note: 'Invite friends with your referral link — you both get free credits.',
   },
   faq: {
@@ -256,7 +256,7 @@ const en: Copy = {
       },
       {
         q: 'How accurate are the estimates?',
-        a: 'The AI gives solid estimates for tracking daily trends. For specific medical conditions, always consult a doctor or dietitian.',
+        a: 'The AI gives estimate for tracking daily trends based on your input, it may makes mistakes. For specific medical conditions, always consult a doctor or dietitian.',
       },
       {
         q: 'Which languages are supported?',
