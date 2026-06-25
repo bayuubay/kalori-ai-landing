@@ -16,10 +16,13 @@ export interface Copy {
   pricing: {
     title: string;
     subtitle: string;
-    starterTitle: string;
-    starterDesc: string;
-    payTitle: string;
-    payDesc: string;
+    freeBadge: string;
+    freePrice: string;
+    freeDesc: string;
+    freeCta: string;
+    packDesc: string;
+    payCta: string;
+    creditsUnit: string;
     note: string;
   };
   faq: { title: string; items: { q: string; a: string }[] };
@@ -116,12 +119,13 @@ const id: Copy = {
   pricing: {
     title: 'Harga UMKM, bayar sesuai kebutuhan',
     subtitle: 'Coba sekarang, gratis! Top up mudah dan murah, kapan saja kamu butuh.',
-    starterTitle: 'Dapatkan kredit gratis di awal',
-    starterDesc:
-      'Setiap pengguna baru dapat kredit gratis untuk mencoba. Tanpa kartu kredit, tanpa langganan.',
-    payTitle: 'Bayar sesuai pemakaian',
-    payDesc:
-      'Tiap analisis pakai kredit (foto atau teks). Top up paket kredit dengan metode pembayaran favoritmu.',
+    freeBadge: 'Gratis',
+    freePrice: 'Rp0',
+    freeDesc: 'Kredit gratis untuk pengguna baru. Tanpa kartu kredit, tanpa langganan.',
+    freeCta: 'Mulai gratis',
+    packDesc: 'Tiap analisis pakai kredit (foto/teks). Top up via metode pembayaran favoritmu.',
+    payCta: 'Top up',
+    creditsUnit: 'kredit',
     note: 'Ajak teman lewat tautan undangan — kalian berdua dapat kredit gratis.',
   },
   faq: {
@@ -235,12 +239,13 @@ const en: Copy = {
   pricing: {
     title: 'Simple pricing, pay as you go',
     subtitle: 'Try it free first. Top up anytime you need more.',
-    starterTitle: 'Free starter credits',
-    starterDesc:
-      'Every new user gets free credits to try it out. No credit card, no subscription.',
-    payTitle: 'Pay as you go',
-    payDesc:
-      'Each analysis uses credits (photos cost a bit more than text). Top up credit packs via your favourite payment method anytime.',
+    freeBadge: 'Free',
+    freePrice: 'Rp0',
+    freeDesc: 'Free credits for new users. No credit card, no subscription.',
+    freeCta: 'Start free',
+    packDesc: 'Each analysis uses credits (photo/text). Top up via your favourite payment method.',
+    payCta: 'Top up',
+    creditsUnit: 'credits',
     note: 'Invite friends with your referral link — you both get free credits.',
   },
   faq: {
