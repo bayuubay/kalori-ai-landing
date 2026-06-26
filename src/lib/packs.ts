@@ -46,3 +46,26 @@ export async function fetchCreditPacks(): Promise<CreditPack[]> {
 export function formatIdr(amount: number): string {
   return `Rp${amount.toLocaleString('id-ID')}`;
 }
+
+/** Effective price per credit for a paid pack (lower = better value). */
+export function pricePerCredit(pack: CreditPack): number {
+  if (pack.credits <= 0) return Infinity;
+  return pack.finalAmountIdr / pack.credits;
+}
+
+/**
+ * Id of the paid pack with the cheapest price per credit ("best value").
+ * Ignores the free pack and any zero-priced pack. Returns null when there is
+ * fewer than two paid packs (no meaningful comparison to highlight).
+ */
+export function bestValuePackId(packs: CreditPack[]): string | null {
+  const paid = packs.filter(
+    (p) => p.id !== FREE_PACK.id && p.finalAmountIdr > 0 && p.credits > 0,
+  );
+  if (paid.length < 2) return null;
+  let best = paid[0];
+  for (const p of paid) {
+    if (pricePerCredit(p) < pricePerCredit(best)) best = p;
+  }
+  return best.id;
+}

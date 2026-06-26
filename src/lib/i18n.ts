@@ -24,6 +24,8 @@ export interface Copy {
     payCta: string;
     creditsUnit: string;
     note: string;
+    bestValueBadge: string;
+    perCredit: string;
   };
   faq: { title: string; items: { q: string; a: string }[] };
   finalCta: { title: string; subtitle: string };
@@ -127,6 +129,8 @@ const id: Copy = {
     payCta: 'Top up',
     creditsUnit: 'kredit',
     note: 'Ajak teman lewat tautan undangan — kalian berdua dapat kredit gratis.',
+    bestValueBadge: '🔥 Paling Worth It!',
+    perCredit: '/kredit',
   },
   faq: {
     title: 'Pertanyaan umum',
@@ -247,6 +251,8 @@ const en: Copy = {
     payCta: 'Top up',
     creditsUnit: 'credits',
     note: 'Invite friends with your referral link — you both get free credits.',
+    bestValueBadge: '🔥 Hot Deal!',
+    perCredit: '/credit',
   },
   faq: {
     title: 'Frequently asked questions',
