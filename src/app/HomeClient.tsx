@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { BOT_URL, BRAND } from '@/lib/config';
+import { BOT_URL, BRAND, PWA_URL } from '@/lib/config';
 import { COPY, type Lang } from '@/lib/i18n';
 import {
   FREE_PACK,
@@ -59,6 +59,27 @@ function CtaButton({
   );
 }
 
+/** Opens the installable PWA — no Telegram account required. */
+function AppCtaButton({
+  label,
+  className = '',
+}: {
+  label: string;
+  className?: string;
+}) {
+  return (
+    <a
+      href={PWA_URL}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`inline-flex items-center justify-center gap-2 rounded-full border border-gray-300 px-6 py-3 text-sm font-semibold text-gray-700 transition hover:bg-gray-100 ${className}`}
+    >
+      <AppIcon />
+      {label}
+    </a>
+  );
+}
+
 function Nav({
   lang,
   setLang,
@@ -99,6 +120,10 @@ function Nav({
         </nav>
         <div className="flex items-center gap-3">
           <LangToggle lang={lang} setLang={setLang} />
+          <AppCtaButton
+            label={t.ctaSecondary}
+            className="hidden px-4 py-2 sm:inline-flex"
+          />
           <CtaButton label={t.cta} className="hidden sm:inline-flex" />
         </div>
       </div>
@@ -150,6 +175,7 @@ function Hero({ t }: { t: T }) {
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <CtaButton label={t.cta} />
+            <AppCtaButton label={t.ctaSecondary} />
           </div>
           <p className="mt-4 text-xs text-gray-400">{t.hero.proof}</p>
         </div>
@@ -496,15 +522,26 @@ function FinalCta({ t }: { t: T }) {
           {t.finalCta.title}
         </h2>
         <p className="mt-4 text-lg text-white/90">{t.finalCta.subtitle}</p>
-        <a
-          href={BOT_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-white px-8 py-3.5 text-sm font-semibold text-brand shadow-lg transition hover:bg-gray-100"
-        >
-          <TelegramIcon />
-          {t.cta}
-        </a>
+        <div className="mt-8 flex flex-wrap justify-center gap-3">
+          <a
+            href={BOT_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-8 py-3.5 text-sm font-semibold text-brand shadow-lg transition hover:bg-gray-100"
+          >
+            <TelegramIcon />
+            {t.cta}
+          </a>
+          <a
+            href={PWA_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 rounded-full border border-white/40 px-8 py-3.5 text-sm font-semibold text-white transition hover:bg-white/10"
+          >
+            <AppIcon />
+            {t.ctaSecondary}
+          </a>
+        </div>
       </div>
     </section>
   );
@@ -569,6 +606,26 @@ function TelegramIcon() {
       aria-hidden
     >
       <path d="M21.94 4.3 18.6 20.1c-.25 1.1-.9 1.37-1.83.86l-5.05-3.72-2.44 2.35c-.27.27-.5.5-1.02.5l.36-5.13L16.96 6.9c.4-.36-.09-.56-.62-.2L6.1 13.05l-5.05-1.58c-1.1-.34-1.12-1.1.23-1.62L20.5 2.65c.92-.34 1.72.2 1.44 1.65Z" />
+    </svg>
+  );
+}
+
+/** Installable-app glyph (phone outline) for the PWA CTA. */
+function AppIcon() {
+  return (
+    <svg
+      width="16"
+      height="16"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden
+    >
+      <rect x="6" y="2.5" width="12" height="19" rx="2.5" />
+      <path d="M11 18.5h2" />
     </svg>
   );
 }

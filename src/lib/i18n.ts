@@ -46,7 +46,7 @@ interface Step {
 const id: Copy = {
   nav: { features: 'Fitur', how: 'Cara Kerja', pricing: 'Harga', faq: 'FAQ' },
   cta: 'Mulai di Telegram',
-  ctaSecondary: 'Coba Gratis',
+  ctaSecondary: 'Buka Aplikasi Web',
   hero: {
     badge: '🤖 Asisten gizi bertenaga AI',
     title: 'Hitung kalori cukup dari',
@@ -168,7 +168,7 @@ const id: Copy = {
 const en: Copy = {
   nav: { features: 'Features', how: 'How it works', pricing: 'Pricing', faq: 'FAQ' },
   cta: 'Start on Telegram',
-  ctaSecondary: 'Try Free',
+  ctaSecondary: 'Open Web App',
   hero: {
     badge: '🤖 AI-powered nutrition assistant',
     title: 'Track calories just from',

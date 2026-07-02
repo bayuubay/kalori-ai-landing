@@ -5,6 +5,10 @@ export const BOT_USERNAME =
 /** Deep-link that opens the bot in Telegram. */
 export const BOT_URL = `https://t.me/${BOT_USERNAME}`;
 
+/** Public URL of the installable PWA (kalori-ai-pwa). Set NEXT_PUBLIC_PWA_URL in .env. */
+export const PWA_URL =
+  process.env.NEXT_PUBLIC_PWA_URL ?? 'https://app.kaloriai.my.id';
+
 export const BRAND = 'Kalori AI';
 
 /**
